@@ -1,0 +1,16 @@
+@mixin flex($alignItem:center,$justifyContent:center){
+    display: flex;
+    align-items:$alignItem;
+    justify-content:$justifyContent;   
+}
+@mixin media ($width:1024){
+    @media only screen and(max-width:($width + px)) {
+        @content;
+        
+    }
+}
+@mixin mediaMobileFirst($width:320) {
+    @media  only screen and (max-width:($width + px)){ 
+        @content        
+    }
+}
