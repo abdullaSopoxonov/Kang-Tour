@@ -1,0 +1,26 @@
+.header{
+    background-color: $bgHeader-color;
+    width: 100%;
+}
+.header__wrap{
+    padding:13px 0;
+    @include flex_row-between;
+
+}
+.menu{
+    @include flex_row-between;
+
+}
+.menu__item{
+    @include flex_row-between;
+    column-gap: 20px;
+        &--link{
+        font-size: 16px;
+
+        font-family: $header-fots;
+        color:$header-color;
+        
+    }
+    
+
+}

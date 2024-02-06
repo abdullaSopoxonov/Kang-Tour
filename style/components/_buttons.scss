@@ -1,16 +1,35 @@
-@mixin flex($alignItem:center,$justifyContent:center){
-    display: flex;
-    align-items:$alignItem;
-    justify-content:$justifyContent;   
-}
-@mixin media ($width:1024){
-    @media only screen and(max-width:($width + px)) {
-        @content;
-        
+// header
+.menu__burger{
+    width: 35px;
+    // height: 24px;
+    // display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    row-gap: 4px;
+    // line-height: 0;?
+
+    // border: 1px solid red;
+    @include flex_col-between();
+    display: none;
+
+    &--span{
+        border: 1px solid #FFF;
+        background-color:#fff;
+        height: 3px;
+        border-radius: 10px;
+        // line-height: 0;
+
     }
+
+    // @include media_1024 (
+    //     content{
+
+    //         display:flex;
+    //     }
+
+    
+
+    // )
 }
-@mixin mediaMobileFirst($width:320) {
-    @media  only screen and (max-width:($width + px)){ 
-        @content        
-    }
-}
+// maim

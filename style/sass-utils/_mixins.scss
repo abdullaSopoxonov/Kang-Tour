@@ -1,0 +1,28 @@
+@mixin flex($alignItem:center,$justifyContent:center){
+    display: flex;
+    align-items:center;
+    justify-content:center;   
+    
+}
+@mixin flex_row-between(){
+    display: flex;
+    align-items:center;
+    justify-content:space-between;   
+}
+@mixin flex_col-between(){
+    display: flex;
+    flex-direction: column;
+    align-items:space-between;
+    justify-content:center;   
+}
+@mixin media_1024 ($width:1024){
+    @media only screen and(max-width:($width + px)) {
+        @content;
+        
+    }
+}
+@mixin mediaMobileFirst($width:320) {
+    @media  only screen and (max-width:($width + px)){ 
+        @content        
+    }
+}
